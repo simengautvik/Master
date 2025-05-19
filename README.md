@@ -1,10 +1,7 @@
-# Master
+# In this repository, you will find all the scripts and output Excel files from the predictive script. Including stock prices added after obtaining the predicted score. 
+# We have chosen not to include the initial dataset due to issues that may arise with the Eikon Database privacy concerns.
+# However, we have included detailed steps in the script, for each code written, so the reader can easily get an overview of what is done, and why it's done
+# This ensures transparency and allows readers to form opinions on our findings.
 
-# In this repotary you will find all the datasets and scripts used to perform the data analyisis used in the masters thesis. 
-# This is done to ensure transparency, for the reader to fully comprehend what was done, and how it was done
-
-# The AI performance prediction script could not be run without and API key, and requires credits on the openai platform to run.
-# All other script are functioning, and possible to run with the correspondant dataset. 
-
-# There are two datasets for the performance predictive script, one for 2019 including metrics for 2016-2018. 
-# The other dataset (name) is for 2020 prediction, including metrics from 2016-2019.
+# The AI performance prediction script can not be run without an API key, so it requires credits on the OpenAI platform.
+# All other scripts are functioning and can be run with the same financial metrics that are listed in the appendix.  
