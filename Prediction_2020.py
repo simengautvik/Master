@@ -1,28 +1,19 @@
-"import openai 
+import openai 
 import pandas as pd
 import os
-from sklearn.preprocessing import StandardScaler
 import re
 import joblib
 
 
-# Set your OpenAI API key
+# This is where the OpenAI API key is supposded to be inserted. Due to privacy conscerns, our personal key is not included. 
 openai.api_key = "YOUR_API_KEY_HERE"  # Replace with your actual API key
 
-# Load financial data with factors included for both 2017 and 2018
+# This is where the financial data collected from Eikon is inserted. The dataset consists of financial metrics listed in the appendix. 
+# In order to run this you will need to collect your own metrics for the companies through an API key, as we cannot share our due to the policy of Eikon
 file_path = r"YOUR_DATA_HERE"
 df = pd.read_csv(file_path, encoding="utf-8")
 
 print(df.columns)
-
-
-# Backup original stock prices
-original_prices = df[["Instrument", "Company_Common_Name"]].copy()
-
-# Define output columns (columns to retain in final file)
-output_cols = [
-    "Instrument", "Company_Common_Name"
-]
 
 # Function to analyze financial data with OpenAI. Its essentially a prompt that explains the objective to the AI LLM model, making sure that its predetermined to give advice with backstory so it better understand its objective
 # Essentially its a guide that we write so the model is aware of the task at hand, making it better suited to make a preditction on the stock based on the information we feed it. We also allowed it to use its neural network
@@ -157,9 +148,6 @@ Score 10: Reserved for top-tier companies with exceptional performance across al
 # Apply AI analysis to all companies (ensuring correct shape)
 df['Stock_Performance_Score'] = df.apply(lambda row: analyze_stock_performance(row), axis=1)
 
-# Restore original stock prices (overwrite scaled versions)
-df.update(original_prices)
-
 # Keep only required output columns
 final_output = df[output_cols + ["Stock_Performance_Score"]]
 
@@ -171,8 +159,5 @@ output_file_path = r"YOUR_DATA_HERE"
 final_output.to_csv(output_file_path, index=False, float_format="%.6f")
 print(f"Scores saved to: {output_file_path}")
 
-import pandas as pd
-
 df = pd.read_csv(r"YOUR_DATA_HERE")
 df.to_excel(r"YOUR_DATA_HERE", index=False)
- " say i want to know which of the variables the AI model uses the most in order to make the prediction. How would i manage to see that?
