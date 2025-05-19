@@ -1,11 +1,24 @@
-# "Prediction_2019.py" and "Prediction_2020.py" is the intial predicting script that got us the assigned performance score. The input dataset has not been included in the GitHub due to concerns regarding Eikons guidline of sharing data to others since its only supposed to be used for personal use. However, we have included the metrics needed in order to perform the same prediciton as we have done. This requires the user to gather the data on their own. But the script will still work the same way regardless. 
+# This repository contains all scripts and result files related to our AI-based stock prediction analysis for 2019 and 2020.
 
-# "OLS_regression_AI_2019_2020.xlsx" and "OLS_regression_Realized_2019_2020.xlsx" is the dataset used for peforming the OLS regression, and the OLS results is posted within the Excel file. The OLS script is located in the repository under the namne "OLS Regression Script & Heteroskedasticity.py". Download the dataset, and include it to your directory for Python. Remeber to assign the correct dataset. 
+# "Prediction_2019.py" and "Prediction_2020.py" are the initial scripts used to generate the performance scores.
+# The input datasets are not included in the repository due to Refinitiv Eikon's data-sharing restrictions, as the data is intended strictly for personal use.
+# However, we have included all necessary financial metrics in the appendix so that users can independently gather the data and rerun the scripts.
+# The scripts themselves remain fully functional and will yield the same output when run with equivalent input data.
 
-# In this repository, you will find all the scripts and output Excel files from the predictive script. Including stock prices added after obtaining the predicted score. 
-# We have chosen not to include the initial dataset due to issues that may arise with the Eikon Database privacy concerns. We would rather not take any chances, as the organization has stated that it's for individual use and not to be shared externally. 
-# However, we have included detailed steps in the script for each code written, so the reader can easily get an overview of what is done and why it's done
-# This ensures transparency and allows readers to form opinions on our findings.
+# "OLS_regression_AI_2019_2020.xlsx" and "OLS_regression_Realized_2019_2020.xlsx" contain the datasets used for performing the OLS regressions.
+# The regression results are already embedded in the Excel files.
+# The associated Python script, "OLS Regression Script & Heteroskedasticity.py", is available in the repository.
+# To replicate the analysis, download the dataset, place it in your local Python directory, and ensure the correct file path is assigned in the script.
 
-# The AI performance prediction script can not be run without an API key, so it requires credits on the OpenAI platform.
-# All other scripts are functioning and can be run with the same financial metrics that are listed in the appendix.  
+# "Fama_French_AI_2019_2020.xlsx" and "Fama_French_Realized_2019_2020.xlsx" are used for Fama-French five-factor regression.
+# This was conducted using Excel’s built-in Data Analysis → Regression tool, and the results are included in the same Excel files.
+# While the analysis can be re-run, all outputs are already provided for convenience.
+
+# This repository also includes stock price data added after the predicted scores were obtained, along with all scripts and output files from the prediction process.
+# We have intentionally excluded the original input datasets to comply with Refinitiv Eikon’s usage policies and avoid any potential licensing issues.
+
+# To ensure transparency, each script is thoroughly documented with clear, step-by-step explanations of what is being done and why.
+# This enables readers to fully understand the methodology and form their own judgments about the results.
+
+# Note: The AI prediction scripts require an OpenAI API key, which involves usage credits.
+# All other scripts can be executed locally using the financial metrics listed in the appendix.
