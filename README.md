@@ -1,4 +1,4 @@
-# This repository contains all scripts and result files related to our AI-based stock prediction analysis for 2019 and 2020.
+# This repository contains scripts and result files related to our AI-based stock prediction analysis for 2019 and 2020.
 
 # "Prediction_2019.py" and "Prediction_2020.py" are the initial scripts used to generate the performance scores.
 # The input datasets are not included in the repository due to Refinitiv Eikon's data-sharing restrictions, as the data is intended strictly for personal use.
